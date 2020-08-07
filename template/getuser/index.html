@@ -1,0 +1,22 @@
+{{define "head"}}<title>User {{.ID}}</title>{{end}}
+{{define "body"}}
+    <h1>Пользователь</h1>
+    <div>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Firstname </th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Birthday</th>
+            </tr>
+            <tr>
+                <td>{{.ID}}</td>
+                <td>{{.FirstName}}</td>
+                <td>{{.LastName}}</td>
+                <td>{{.Email}}</td>
+                <td>{{.Birthday}}</td>
+            </tr>
+        </table>
+    </div>
+{{end}}

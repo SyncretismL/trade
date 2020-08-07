@@ -1,0 +1,77 @@
+{{define "head"}}
+<title>{{if eq .Filter "ticker"}} Filter by ticker {{else if eq .Filter "user"}} Filter by user {{else}} All Robots {{end}}</title>
+{{end}}
+{{define "body"}}
+    <script type="text/javascript">
+        function WebSocketPrice() {
+            if ("WebSocket" in window) {
+                var ws = new WebSocket("ws://localhost:8080/api/v1/robots/wsrobots"); 
+                ws.onopen = function () {
+                    alert("WS is opened");
+                };
+
+                ws.onmessage = function(evt) {
+                    var received_msg = JSON.parse(evt.data);
+
+                    for(var i = 0; i < received_msg.length; i++) {
+                    let factYield = document.getElementById("factYield_"+received_msg[i].RobotID)
+                    if (factYield != null) { factYield.innerHTML = "<pre>" + received_msg[i].FactYield + "</pre>";}
+                    let dealsCount = document.getElementById("dealsCount_"+received_msg[i].RobotID)
+                    if (dealsCount != null) { dealsCount.innerHTML = "<pre>" + received_msg[i].DealsCount + "</pre>";}
+                    }
+                };
+
+                ws.onclose = function () {
+                    alert("WS is closed");
+                };
+            } else {
+                alert("WebSocket is not supported in your browser");
+            }
+        }
+    </script>
+    <h1>Robots</h1>
+    <div>
+        <table border="1">
+            <tr>
+                <th>RobotID</th>
+                <th>UserID </th>
+                <th>ParentRobotID</th>
+                <th>Favorite</th>
+                <th>Active</th>
+                <th>Ticker</th>
+                <th>BuyPrice</th>
+                <th>SellPrice</th>
+                <th>PlanStar</th>
+                <th>PlanEnd</th>
+                <th>PlanYield</th>
+                <th>FactYield</th>
+                <th>DealsCount</th>
+                <th>ActivatedAt</th>
+                <th>DeactivatedAt</th>
+                <th>CreatedAt</th>
+                <th>DeletedAt</th>
+            </tr>
+            {{range $key,$value := .Robots }}
+            <tr>
+                <td>{{$value.RobotID}}</td>
+                <td>{{$value.OwnerUserID}}</td>
+                <td>{{$value.ParentRobotID}}</td>
+                <td>{{$value.IsFavorite}}</td>
+                <td>{{$value.IsActive}}</td>
+                <td>{{$value.Ticker}}</td>
+                <td>{{$value.BuyPrice}}</td>
+                <td>{{$value.SellPrice}}</td>
+                <td><div>{{if $value.PlanStart.Valid}}{{$value.PlanStart.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if $value.PlanEnd.Valid}}{{$value.PlanEnd.Time}}{{else}}0{{end}}</div></td>
+                <td>{{$value.PlanYield}}</td>
+                <td><div id="factYield_{{$value.RobotID}}">{{$value.FactYield}}</div></td>
+                <td><div id="dealsCount_{{$value.RobotID}}">{{$value.DealsCount}}</div></td>
+                <td><div>{{if $value.ActivatedAt.Valid}}{{$value.ActivatedAt.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if $value.DeactivatedAt.Valid}}{{$value.DeactivatedAt.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if $value.CreatedAt.Valid}}{{$value.CreatedAt.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if $value.DeletedAt.Valid}}{{$value.DeletedAt.Time}}{{else}}0{{end}}</div></td>
+            </tr>
+            {{end}}
+        </table>
+    </div>
+{{end}}

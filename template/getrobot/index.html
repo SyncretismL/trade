@@ -1,0 +1,91 @@
+{{define "head"}}<title>Робот {{.RobotID}}</title>{{end}}
+{{define "body"}}
+    <script type="text/javascript">
+    function Do(url) {
+        var http = new XMLHttpRequest();
+        http.open("PUT", url, true);
+        http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        http.send()
+    }
+        function WebSocketPrice() {
+            if ("WebSocket" in window) {
+                var ws = new WebSocket("ws://localhost:8080/api/v1/robot/{{.RobotID}}/wsrobot");
+                ws.onopen = function () {
+                    alert("WS is opened");
+                };
+
+                ws.onmessage = function(evt) {
+                    var received_msg = JSON.parse(evt.data);
+
+                    document.getElementById("factYield_"+received_msg.RobotID).innerHTML = "<pre>" + received_msg.FactYield + "</pre>";
+                    document.getElementById("dealsCount_"+received_msg.RobotID).innerHTML = "<pre>" + received_msg.DealsCount + "</pre>";
+                };
+
+                ws.onclose = function () {
+                    alert("WS is closed");
+                };
+            } else {
+                alert("WebSocket is not supported in your browser");
+            }
+        }
+    </script>
+    <h1>Робот</h1>
+    <div>
+        <table border="1">
+            <tr>
+                <th>RobotID</th>
+                <th>UserID </th>
+                <th>ParentRobotID</th>
+                <th>Favorite</th>
+                <th>Active</th>
+                <th>Ticker</th>
+                <th>BuyPrice</th>
+                <th>SellPrice</th>
+                <th>PlanStar</th>
+                <th>PlanEnd</th>
+                <th>PlanYield</th>
+                <th>FactYield</th>
+                <th>DealsCount</th>
+                <th>ActivatedAt</th>
+                <th>DeactivatedAt</th>
+                <th>CreatedAt</th>
+                <th>DeletedAt</th>
+            </tr>
+            <tr>
+                <td>{{.RobotID}}</td>
+                <td>{{.OwnerUserID}}</td>
+                <td>{{.ParentRobotID}}</td>
+                <td>{{.IsFavorite}}</td>
+                <td>{{.IsActive}}</td>
+                <td>{{.Ticker}}</td>
+                <td>{{.BuyPrice}}</td>
+                <td>{{.SellPrice}}</td>
+                <td><div>{{if .PlanStart.Valid}}{{.PlanStart.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if .PlanEnd.Valid}}{{.PlanEnd.Time}}{{else}}0{{end}}</div></td>
+                <td>{{.PlanYield}}</td>
+                <td><div id="factYield_{{.RobotID}}">{{.FactYield}}</div></td>
+                <td><div id="dealsCount_{{.RobotID}}">{{.DealsCount}}</div></td>
+                <td><div>{{if .ActivatedAt.Valid}}{{.ActivatedAt.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if .DeactivatedAt.Valid}}{{.DeactivatedAt.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if .CreatedAt.Valid}}{{.CreatedAt.Time}}{{else}}0{{end}}</div></td>
+                <td><div>{{if .DeletedAt.Valid}}{{.DeletedAt.Time}}{{else}}0{{end}}</div></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="fav-form">
+    <form method="get" onsubmit="Do('/api/v1/robot/{{.RobotID}}/favorite');return false;">
+        <button type="submit">favorite</button>
+    </form>
+</div>
+<div class="act-form">
+    <form method="get" onsubmit="Do('/api/v1/robot/{{.RobotID}}/activate');return false;">
+        <button type="submit">activate</button>
+    </form>
+</div>
+<div class="deact-form">
+    <form method="get" onsubmit="Do('/api/v1/robot/{{.RobotID}}/deactivate');return false;">
+        <button type="submit">deactivate</button>
+    </form>
+</div>
+{{end}}

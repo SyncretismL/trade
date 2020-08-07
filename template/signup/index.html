@@ -1,0 +1,19 @@
+{{define "head"}}<title>SignUp</title>{{end}}
+{{define "body"}}
+<div class="log-form">
+    <h2>Create your account</h2>
+    <form method="post" action="/api/v1/signup">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="johnpew@pewpew.com"> <br/>
+        <label for="pass">Password</label>
+        <input type="text" id="pass" name="pass" value="Pewpew"> <br/>
+        <label for="first_name">Firstname</label>
+        <input type="text" id="first_name" name="first_name" value="John"> <br/>
+        <label for="last_name">Lastname</label>
+        <input type="text" id="last_name" name="last_name" value="Be"> <br/>
+        <label for="birthday">birthday</label>
+        <input type="text" id="birthday" name="birthday" value="1900-01-01"> <br/>
+        <button type="submit">SignUp</button>
+    </form>
+</div>
+{{end}}

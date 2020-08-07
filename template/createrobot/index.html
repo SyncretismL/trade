@@ -1,0 +1,22 @@
+{{define "head"}}<title>CreateRobot</title>{{end}}
+{{define "body"}}
+<div class="create-form">
+    <h2>Create Robot</h2>
+    <form method="post" action="/api/v1/robot">
+        <label for="ticker">Ticker</label>
+        <input type="text" id="ticker" name="ticker"> <br/>
+        <label for="buy_price">Buy Price</label>
+        <input type="text" id="buy_price" name="buy_price"> <br/>
+        <label for="sell_price">Sell Price</label>
+        <input type="text" id="sell_price" name="sell_price"> <br/>
+        <label for="plan_start">Plan Start</label>
+        <input type="text" id="plan_start" name="plan_start"> <br/>
+        <label for="plan_end">Plan End</label>
+        <input type="text" id="plan_end" name="plan_end"> <br/>
+        <label for="plan_yield">Plan Yield</label>
+        <input type="text" id="plan_yield" name="plan_yield"> <br/>
+        <button type="submit">Create</button>
+
+    </form>
+</div>
+{{end}}

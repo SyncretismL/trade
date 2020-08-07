@@ -1,0 +1,13 @@
+{{define "head"}}<title>SignIn</title>{{end}}
+{{define "body"}}
+<div class="log-form">
+    <h2>Login to your account</h2>
+    <form method="post" action="/api/v1/signin">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email"> <br/>
+        <label for="pass">Password</label>
+        <input type="text" id="pass" name="pass"> <br/>
+        <button type="submit">Login</button>
+    </form>
+</div>
+{{end}}

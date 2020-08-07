@@ -1,0 +1,103 @@
+2020-05-12T18:44:45+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T18:46:44+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T18:47:27+03:00	FATAL	auth-api/handlers.go:121	can not execute tamplate with template and viewmodel: &{%!s(int=1) %!s(int=1) %!s(int=0) %!s(bool=false) %!s(bool=false) SBER           %!s(float64=10) %!s(float64=11) {2020-05-12 18:09:00 +0000 +0000 %!s(bool=true)} {2020-05-13 22:20:20 +0000 +0000 %!s(bool=true)} %!s(float64=100000) %!s(float64=132) %!s(int=44) {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)} {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)} {2020-05-12 17:41:36.593507 +0000 +0000 %!s(bool=true)} {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)}}: template: index.html:76:54: executing "body" at <.ID>: can't evaluate field ID in type *robots.Robot
+2020-05-12T18:47:40+03:00	FATAL	auth-api/handlers.go:121	can not execute tamplate with template and viewmodel: &{%!s(int=1) %!s(int=1) %!s(int=0) %!s(bool=false) %!s(bool=false) SBER           %!s(float64=10) %!s(float64=11) {2020-05-12 18:09:00 +0000 +0000 %!s(bool=true)} {2020-05-13 22:20:20 +0000 +0000 %!s(bool=true)} %!s(float64=100000) %!s(float64=132) %!s(int=44) {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)} {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)} {2020-05-12 17:41:36.593507 +0000 +0000 %!s(bool=true)} {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)}}: template: index.html:76:54: executing "body" at <.ID>: can't evaluate field ID in type *robots.Robot
+2020-05-12T18:51:26+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T18:51:59+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T18:53:14+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T18:55:35+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T18:57:05+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T19:36:20+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T19:36:20+03:00	FATAL	auth-api/handlers.go:958	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-12T19:38:09+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T19:38:09+03:00	FATAL	auth-api/handlers.go:958	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-12T19:39:21+03:00	FATAL	auth-api/handlers.go:958	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-12T19:39:21+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T21:39:50+03:00	FATAL	auth-api/handlers.go:964	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-12T21:39:50+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T21:45:49+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T21:45:49+03:00	FATAL	auth-api/handlers.go:969	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-12T21:46:43+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T21:46:43+03:00	FATAL	auth-api/handlers.go:969	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-12T21:52:06+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T21:52:06+03:00	FATAL	auth-api/handlers.go:969	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-12T21:58:51+03:00	ERROR	auth-api/handlers.go:161	can not exec query with userID0: pq: повторяющееся значение ключа нарушает ограничение уникальности "users_email_key"
+2020-05-12T22:11:59+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-12T22:11:59+03:00	FATAL	auth-api/handlers.go:969	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-12T22:18:24+03:00	FATAL	auth-api/handlers.go:969	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-12T22:18:24+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-14T01:29:35+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-14T01:29:36+03:00	FATAL	auth-api/handlers.go:1020	failed to get robots on stream failed to get all non deleted robots: sql: database is closed
+2020-05-14T01:29:36+03:00	ERROR	auth-api/handlers.go:763	failed to get robots failed to get all non deleted robots: sql: database is closed
+2020-05-15T13:57:06+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T13:58:11+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T14:22:28+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T14:39:24+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T14:40:58+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T14:42:43+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T14:42:59+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:06:26+03:00	FATAL	auth-api/handlers.go:992	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T15:06:26+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:09:56+03:00	FATAL	auth-api/handlers.go:992	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T15:09:56+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:30:47+03:00	ERROR	auth-api/handlers.go:653	session was not found can not scan session with token: sql: no rows in result set
+2020-05-15T15:32:26+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:32:26+03:00	FATAL	auth-api/handlers.go:1003	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T15:34:14+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:34:14+03:00	FATAL	auth-api/handlers.go:1003	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T15:36:07+03:00	FATAL	auth-api/handlers.go:1054	failed to get robots on stream failed to scan non deleted robots: sql: Scan error on column index 13, name "activated_at": unsupported Scan, storing driver.Value type <nil> into type *robots.NullTime
+2020-05-15T15:36:55+03:00	FATAL	auth-api/handlers.go:1003	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T15:36:55+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:45:09+03:00	FATAL	auth-api/handlers.go:1014	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T15:45:09+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:49:50+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:49:50+03:00	FATAL	auth-api/handlers.go:1026	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T15:52:18+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:52:18+03:00	FATAL	auth-api/handlers.go:1028	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T15:54:37+03:00	FATAL	auth-api/handlers.go:1029	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T15:54:37+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T15:57:12+03:00	FATAL	auth-api/handlers.go:1029	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T15:57:12+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:01:09+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:01:09+03:00	FATAL	auth-api/handlers.go:1029	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:09:15+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:09:15+03:00	FATAL	auth-api/handlers.go:1040	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:11:40+03:00	FATAL	auth-api/handlers.go:1044	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:11:40+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:24:08+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:24:08+03:00	FATAL	auth-api/handlers.go:1042	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:25:55+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:25:55+03:00	FATAL	auth-api/handlers.go:1042	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T16:28:00+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:45:37+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:45:37+03:00	FATAL	auth-api/handlers.go:1055	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T16:47:20+03:00	FATAL	auth-api/handlers.go:1055	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:47:20+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:47:55+03:00	ERROR	auth-api/handlers.go:380	failed to filter robots can't find robot by filter
+2020-05-15T16:48:03+03:00	FATAL	auth-api/handlers.go:1055	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:48:03+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:48:23+03:00	FATAL	auth-api/handlers.go:1055	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T16:48:23+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:51:27+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T16:51:27+03:00	FATAL	auth-api/handlers.go:1058	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T16:55:24+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T17:50:26+03:00	FATAL	auth-api/handlers.go:1036	stream failed rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:5000: connect: connection refused"
+2020-05-15T17:51:10+03:00	ERROR	auth-api/handlers.go:298	failed to find user can't scan user with email: sql: no rows in result set
+2020-05-15T17:51:29+03:00	ERROR	auth-api/handlers.go:298	failed to find user can't scan user with emailalex@gmailco: sql: no rows in result set
+2020-05-15T17:52:09+03:00	ERROR	auth-api/handlers.go:171	can not exec query with userID0: pq: повторяющееся значение ключа нарушает ограничение уникальности "users_email_key"
+2020-05-15T17:56:11+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T17:56:11+03:00	FATAL	auth-api/handlers.go:1055	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T18:05:01+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:05:01+03:00	FATAL	auth-api/handlers.go:1055	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T18:07:28+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:07:28+03:00	FATAL	auth-api/handlers.go:1060	can't receive from server: rpc error: code = Canceled desc = grpc: the client connection is closing
+2020-05-15T18:08:24+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:08:24+03:00	FATAL	auth-api/handlers.go:1060	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T18:10:05+03:00	FATAL	auth-api/handlers.go:1060	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T18:10:05+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:15:43+03:00	FATAL	auth-api/handlers.go:1061	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T18:15:43+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:16:27+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:16:27+03:00	FATAL	auth-api/handlers.go:1061	can't receive from server: rpc error: code = Unavailable desc = transport is closing
+2020-05-15T18:54:01+03:00	FATAL	auth-api/main.go:94	server stopped http: Server closed
+2020-05-15T18:54:01+03:00	FATAL	auth-api/handlers.go:1062	can't receive from server: rpc error: code = Unavailable desc = transport is closing
